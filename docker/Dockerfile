@@ -64,6 +64,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   whois \
   && rm -rf /var/lib/apt/lists/* \
   && curl -fsSLo /usr/local/bin/git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh \
+  && curl -fsSL https://get.helm.sh/helm-v3.9.4-linux-amd64.tar.gz | tar -xz -C /usr/local/bin \
   && curl -fsSL https://github.com/derailed/k9s/releases/download/v0.26.3/k9s_Linux_x86_64.tar.gz | tar -xz -C /usr/local/bin \
   && locale-gen en_US.UTF-8 \
   && adduser ${USER}
