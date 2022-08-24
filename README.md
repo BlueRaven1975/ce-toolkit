@@ -1,4 +1,4 @@
-# CLOUD ENGINEER TOOLKIT
+# CLOUD ENGINEERING TOOLKIT
 
 This is a collection of tools to perform the typical operations involved in
 Cloud Engineering work.
