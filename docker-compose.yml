@@ -1,0 +1,11 @@
+version: "3.9" # optional since v1.27.0
+
+services:
+  ce-toolkit:
+    build:
+      context: docker
+      args:
+        ANSIBLE_VERSION: $ANSIBLE_VERSION
+        TERRAFORM_VERSION: $TERRAFORM_VERSION
+        USER: $USER
+    image: ce-toolkit

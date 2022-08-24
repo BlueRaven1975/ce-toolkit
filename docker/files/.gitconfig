@@ -1,0 +1,8 @@
+[alias]
+        bra = branch -avv
+[credential]
+        helper = store --file ~/data/.git-credentials
+[fetch]
+        prune = true
+[pull]
+        rebase = false
