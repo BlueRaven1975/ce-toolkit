@@ -137,7 +137,7 @@ export PS1='\[\e[32m\][\u@\h:\[\e[93m\]\w \[\e[96m\]$(__git_ps1 "(%s)")\[\e[95m\
 
 # Ensure Git uses store helper for credentials (workaround for Remote Containers
 # VSCode extension overwriting it)
-sed -i 's/helper = .*/helper = store --file ~\/data\/.git-credentials/' .gitconfig
+sed -i 's/helper = .*/helper = store --file ~\/data\/.git-credentials/' ~/.gitconfig
 
 # User specific aliases and functions
 alias la='ls -a'
