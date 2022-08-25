@@ -52,6 +52,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   kubectl \
   less \
   locales \
+  netbase \
   openssh-client \
   openssl \
   python3-boto3 \
