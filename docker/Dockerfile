@@ -55,6 +55,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   netbase \
   openssh-client \
   openssl \
+  packer \
   python3-boto3 \
   python3-pip \
   rsync \
