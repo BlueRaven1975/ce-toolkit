@@ -82,6 +82,7 @@ RUN set -e; \
   fi \
   && pip3 install --no-cache-dir --no-warn-script-location --user \
   ${ANSIBLE} \
+  ansible-lint \
   ansible-tower-cli \
   && ~/.local/bin/ansible-galaxy collection install amazon.aws \
   && ~/.local/bin/ansible-galaxy collection install azure.azcollection \
