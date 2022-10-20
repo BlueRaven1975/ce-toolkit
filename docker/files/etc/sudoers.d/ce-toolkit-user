@@ -1,0 +1,2 @@
+# CE Toolkit main user can do anything without providing a password
+CE_TOOLKIT_USER ALL=(ALL) NOPASSWD:ALL

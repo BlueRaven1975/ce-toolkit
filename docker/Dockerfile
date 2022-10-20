@@ -59,6 +59,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   python3-boto3 \
   python3-pip \
   rsync \
+  sudo \
   tmux \
   unzip \
   vim \
@@ -70,6 +71,9 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   && curl -fsSL https://github.com/derailed/k9s/releases/download/v0.26.3/k9s_Linux_x86_64.tar.gz | tar -xz -C /usr/local/bin --no-same-owner k9s \
   && locale-gen en_US.UTF-8 \
   && adduser ${USER}
+
+COPY files/etc/sudoers.d/ce-toolkit-user /etc/sudoers.d/${USER}
+RUN sed -i "s/CE_TOOLKIT_USER/${USER}/g" /etc/sudoers.d/${USER} && chmod 0440 /etc/sudoers.d/${USER}
 
 USER ${USER}
 
