@@ -35,13 +35,13 @@ for Ansible and Terraform only), set the corresponding environment variables:
 * `docker run -it --name ce-toolkit --hostname ce-toolkit --network=host
 --env GIT_COMMITTER_NAME="<yourfullname>" --env GIT_COMMITTER_EMAIL="<youremail>"
 --env GIT_AUTHOR_NAME="<yourfullname>" --env GIT_AUTHOR_EMAIL="<youremail>"
--v ce-toolkit-data:/home/$USER/data ce-toolkit`  
+-v ce-toolkit-data:/home/$USER/data --add-host=ce-toolkit:127.0.0.1 ce-toolkit`  
 (for Bash and Bash-compatible shells)
 
 * `docker run -it --name ce-toolkit --hostname ce-toolkit --network=host
 --env GIT_COMMITTER_NAME="<yourfullname>" --env GIT_COMMITTER_EMAIL="<youremail>"
 --env GIT_AUTHOR_NAME="<yourfullname>" --env GIT_AUTHOR_EMAIL="<youremail>"
--v ce-toolkit-data:/home/$env:USER/data ce-toolkit`  
+-v ce-toolkit-data:/home/$env:USER/data --add-host=ce-toolkit:127.0.0.1 ce-toolkit`  
 (for PowerShell)
 
 > **NOTE**: replace *\<yourfullname\>* and *\<youremail\>* with your own data,
