@@ -160,5 +160,6 @@ alias tfw='terraform workspace'
 # Quick secure password generator
 alias pwgen="tr -dc A-Za-z0-9 </dev/urandom | head -c 12 ; echo ''"
 
-# Automatically start SSH Agent
-eval $(ssh-agent) &> /dev/null
+# Automatically start/stop SSH Agent
+eval $(ssh-agent -s) &> /dev/null
+trap 'kill $SSH_AGENT_PID' EXIT
