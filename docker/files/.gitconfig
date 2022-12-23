@@ -1,8 +1,13 @@
 [alias]
-        bra = branch -avv
+  bra = branch -avv
+  fp = !git fetch && git pull
+  hr = "!f() { [ -z "$1" ] && echo "ERROR: origin branch name required \\(e.g. \\'main\\'\\)" || git reset --hard origin/$1 && git clean -xdf; }; f"
+  rg = !git branch -vv | grep ': gone]' | grep -Ev '^\\*' | awk '{print $1}' | xargs -n 1 -r git branch -D
+  rlm = !git branch --merged | grep -Ev '^\\*|main|master|develop' | xargs -n 1 -r git branch -d
+  srm = !git branch -r --merged | grep -Ev 'HEAD|main|master|develop' | sed 's/origin\\///' | xargs -n 1
 [credential]
-        helper = store --file ~/data/.git-credentials
+  helper = store --file ~/data/.git-credentials
 [fetch]
-        prune = true
+  prune = true
 [pull]
-        rebase = false
+  rebase = false
